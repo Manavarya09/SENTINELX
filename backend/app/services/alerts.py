@@ -179,8 +179,8 @@ class AlertService:
 
         # Add severity indicator
         if severity in ["critical", "high"]:
-            content["title"] = f"🚨 {content['title']}"
+            content["title"] = f"ALERT: {content['title']}"
         elif severity == "medium":
-            content["title"] = f"⚠️ {content['title']}"
+            content["title"] = f"WARNING: {content['title']}"
 
         return content["title"], content["message"]
